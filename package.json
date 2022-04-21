@@ -13,7 +13,7 @@
     "build": "rimraf dist types && tsc",
     "test": "vitest",
     "test:run": "vitest run",
-    "publish:pkg":"pnpm test:run && pnpm build && pnpm publish"
+    "publish:pkg":"pnpm test:run && pnpm build && pnpm publish --access public"
   },
   "dependencies": {
     "dargs": "^8.1.0",
