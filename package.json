@@ -1,5 +1,5 @@
 {
-  "name": "yt-dlp-exec",
+  "name": "@lanseria/yt-dlp-exec",
   "version": "0.0.1",
   "packageManager": "pnpm@7.0.0-rc.7",
   "description": "yt-dlp nodejs executable",
@@ -12,7 +12,8 @@
   "scripts": {
     "build": "rimraf dist types && tsc",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "publish:pkg":"pnpm test:run && pnpm build && pnpm publish"
   },
   "dependencies": {
     "dargs": "^8.1.0",

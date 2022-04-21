@@ -20,16 +20,15 @@ describe('YtDlp', () => {
     expect(YtDlp).toBeDefined()
   })
 
-  it('should be can output json', async() => {
+  it.skip('should be can output json', async() => {
     const ytDlp = new YtDlp('yt-dlp')
     const output = await ytDlp.execDumpSingleJson(BILIBILI_URL)
-
     expect(output).toBeDefined()
   })
 })
 
 describe('EveryVideoSource', () => {
-  it.concurrent('bilibili', async() => {
+  it.skip.concurrent('bilibili', async() => {
     const ytDlp = new YtDlp('yt-dlp')
     const output = await ytDlp.execDumpSingleJson(BILIBILI_URL)
     expect(output).toMatchSnapshot()
